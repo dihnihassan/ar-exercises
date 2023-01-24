@@ -26,4 +26,6 @@ Store.create(name: "Yaletown", annual_revenue: 430000, mens_apparel: true, women
   # puts store.annual_revenue
 end
 
-# puts @mens_stores
+@womens_stores = Store.where(womens_apparel: true, annual_revenue: < 1000000)
+
+puts @womens_stores.inspect
